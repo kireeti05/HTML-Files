@@ -1,0 +1,43 @@
+.main{
+margin-top: 25px;
+width: 500px;
+height: 600px;
+background-color: #d8ffd8;
+border: 3px solid black;
+border-radius: 5px;
+margin-left: auto;
+margin-right: auto;
+postion: relative;
+}
+
+.showthisonhover{
+display: none;
+background-color:#807877;
+width: 400px;
+height: 480px;
+opacity: 0.8;
+margin-top: 60px;
+margin-left: 50px;
+position: absolute;
+text-align: center;
+color: white;
+}
+
+.image{
+ width: 80%;
+height: 80%;
+margin-top: 60px;
+margin-left: 50px;
+margin-right: 50px;
+}
+ 
+.main:hover 
+.showthisonhover {
+display: block;
+overflow: auto;
+text-align: center;
+}
+
+.song{
+margin-left: 100px;
+}
