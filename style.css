@@ -1,66 +1,72 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.flip-card-container {
-  width: 300px;
-  height: 400px;
-}
-.flip-card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-.flip-card-container:hover .flip-card {
-  transform: rotateY(180deg); /* <=>  rotateY(.5turn) */
-}
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border-radius: 0.5rem; */
-}
-.flip-card-front {
-  background-color: #333;
-  color: #fff;
-}
-.flip-card-back {
-  background-color: #517fa4;
-  color: #fff;
-  transform: rotateY(180deg);
+body{
+margin: 0px;
+padding: 0px;
 }
 
-.flip-card-front img {
-  width: 100%;
-  height: 100%;
-  /* border-radius: 0.5rem; */
+section{
+height: 100vh;
+background: #000;
 }
-.flip-card-back p {
-  text-align: center;
-  margin: 1rem;
-  font-size: 1.4rem;
-  line-height: 1.5rem;
+
+h1{
+margin: 0px;
+padding: 0px;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 100%;
+text-align: center;
+color: #ddd;
+font-size: 5em;
+font-family: sans-serif;
+letter-spacing: 0.2em;
 }
-.flip-card-back p span {
-  display: block;
-  font-size: 1rem;
-  font-style: italic;
-  font-weight: bold;
-  margin-top: 1.25rem;
+
+video{
+object-fit: cover;
+}
+
+h1 span{
+opacity: 0;
+display: inline-block;
+animation: animate 1s linear forwards;
+}
+
+@keyframes animate{
+ 0%{ opacity: 0;
+     transform: rotateY(90deg);
+     filter: blur(10px);	
+   }
+ 100%{ opacity:1;
+       transform: rotateY(0deg); 
+       filter: blur(0);
+     }
+}
+
+h1 span:nth-child(1){
+animation-delay: 1s;
+}
+
+h1 span:nth-child(2){
+animation-delay: 1.5s;
+}
+
+h1 span:nth-child(3){
+animation-delay: 2s;
+}
+
+h1 span:nth-child(4){
+animation-delay: 2.5s;
+}
+
+h1 span:nth-child(5){
+animation-delay: 3s;
+}
+
+h1 span:nth-child(6){
+animation-delay: 3.5s;
+}
+
+h1 span:nth-child(7){
+animation-delay: 4s;
 }
